@@ -6,7 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+      - name: trigger the test in another repo
+        uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
           owner: santhoshshetty
           repo: GithubActions
