@@ -6,13 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: trigger the test in another repo
-        uses: convictional/trigger-workflow-and-wait@v1.3.0
-        with:
-          owner: santhoshshetty
-          repo: GithubActions
-          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          workflow_file_name: basic.yml
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
