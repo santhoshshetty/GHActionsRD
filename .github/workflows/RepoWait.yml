@@ -20,7 +20,7 @@ jobs:
           owner: santhoshshetty
           repo: GithubActions
           github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          workflow_file_name: Sample.yml
+          workflow_file_name: basic.yml
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
