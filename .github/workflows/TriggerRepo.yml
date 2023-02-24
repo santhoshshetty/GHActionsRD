@@ -22,6 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Trigger orders repo
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: santhoshshetty
+          repo: GithubActions
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          workflow_file_name: Sample.yml
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
