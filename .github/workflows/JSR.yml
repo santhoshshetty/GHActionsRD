@@ -6,6 +6,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: trigger the automated test in another repo
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets. REPO_ACCESS_TOKEN }}
+          repository: santhoshshetty/GithubActions
+          event-type: SMT_Event
+          client-payload: '{"github": ${{ toJson(github) }}}'
+
